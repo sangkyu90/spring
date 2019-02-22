@@ -12,8 +12,8 @@
 </head>
 <body>
 <table width="500" cellpadding="0" cellspacing="0" border="1"> 
-<from action="modify" method ="post">
-	<input type = "hidden" name= "bId" value = "${content_view.bId}">
+	<form action="modify" method ="post">
+	<input type = "hidden" name= "bId" value ="${content_view.bId}">
 	
 	<tr>
 		<td>번호</td>
@@ -33,11 +33,11 @@
 	</tr>
 	<tr>
 		<td>내용</td>
-		<td><textarea rows="10" name="bContent" value="${content_view.bContent}"> </textarea></td>
+		<td><textarea rows="10" name="bContent" >${content_view.bContent}</textarea></td>
 	</tr>
-		<td colspan="2"><input type="submit" value="수정">&nbsp;&nbsp;<a href="list">목록보기</a>&nbsp;&nbsp;<a href="delete">삭제</a>&nbsp;&nbsp;<a href="reply">답변</a>
+		<td colspan="2"><input type ="submit" value="수정"> &nbsp;&nbsp; <a href="list">목록보기</a> &nbsp;&nbsp; <a href="delete?bId=${content_view.bId}">삭제</a> &nbsp;&nbsp; <a href="reply_view?bId=${content_view.bId}">답변</a>
 		</td>
-		</from>
+		</form>
 		</table>
 		
 </body>
